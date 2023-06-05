@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Asset Status Observer</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head> 
+<body>
+    <main>
+        <header>
+            <a class="logo" href="/">Real Time Asset Observer</a>
+            <form action="/search" method="GET">
+                <input 
+                    autofocus
+                    class="search-input"
+                    value="{{ .Query }}"
+                    placeholder="Asset lookup"
+                    type="search"
+                    name="q"
+                />
+                <a
+                  href="#"
+                  class="button github-button"
+                >/</a>
+            </form>
+        </header>
+        <section class="container">
+            <div class="asset-view">
+                <div>
+                    <img class="article-image" src="assets/images/bike.png" />    
+                </div>
+                <div class="asset-telemetry">
+                    <h3>Imei</h3><p>35054450xxxxxx</p>
+                    <h3>Latitude</h3><p>-1.336211</p>
+                    <h3>Longitude</h3><p>36.863965</p>
+                    <h3>GPSDate</h3><p>18/04/2023 09:09:39</p>
+                    <h3>Heading</h3><p>335</p>
+                    <h3>EventID</h3><p>124</p>
+                    <h3>EventName</h3><p>Position</p>
+                    <h3>AdditionalEventInfo</h3><p>""</p>
+                    <h3>Odometer</h3><p>12730.836</p>
+                    <h3>EngineHours</h3><p>185213</p>
+                    <h3>VehicleSpeed</h3><p>0.0</p>
+                    <h3>RoadSpeedLimit</h3><p>0</p>
+                    <h3>RoadName</h3><p>Nairobi</p>
+                    <h3>DriverID</h3><p>0</p>
+                    <h3>IsIgnitionOn</h3><p>false</p> 
+                    <h3>Altitude</h3><p>1646</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
