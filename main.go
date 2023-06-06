@@ -2,13 +2,11 @@ package main
 
 import (
 	"bytes"
-	"context"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"text/template"
-	"time"
 
 	"github.com/joho/godotenv"
 )
@@ -43,24 +41,24 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx := context.Background()
+	// ctx := context.Background()
 
-	client, err := bigquery.NewClient(ctx, projectID)
-	if err != nil {
-		log.Fatalf("bigquery.NewClient: %v", err)
-	}
-	defer client.Close()
+	// client, err := bigquery.NewClient(ctx, projectID)
+	// if err != nil {
+	// 	log.Fatalf("bigquery.NewClient: %v", err)
+	// }
+	// defer client.Close()
 
-	rows, err := query(ctx, client)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if err := printResults(os.Stdout, rows); err != nil {
-		log.Fatal(err)
-	}
+	// rows, err := query(ctx, client)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// if err := printResults(os.Stdout, rows); err != nil {
+	// 	log.Fatal(err)
+	// }
 
-	myClient := &http.Client{Timeout: 10 * time.Second}
-	telemetryapi := telemetry.NewClient(myClient)
+	// myClient := &http.Client{Timeout: 10 * time.Second}
+	//telemetryapi := telemetry.NewClient(myClient)
 
 	mux := http.NewServeMux()
 	fs := http.FileServer(http.Dir("assets"))
